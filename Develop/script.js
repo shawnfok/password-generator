@@ -2,11 +2,12 @@
 // Lowercase letters
 lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 // Uppercase letters
-upper = lower.toUppercase();
+var upper = lower.map(function(x){ return x.toUpperCase(); })
 // Numeric characters
 number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 // Special characters 
-special = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", " < ", "=", " > ", " ? ", "@", "[", "]", " ^ ", "_", "{", "|", "}", "~"];
+special = ["!", "#", "$", "%", "&", "(", ")", "*", "+", ",", "-", ".", "<", "=", ">", "?", "@", "[", "]", "^", "_", "{", "|", "}", "~"];
+
 
 // Assignment Code
 var generateBtn = document.getElementById("generate");
@@ -41,6 +42,7 @@ function generatePassword() {
   if (!confirmLowercase && !confirmUppercase && !confirmNumber && !confirmSpecial) {
     choices = alert("Opps! You must choose at least one criteria.");
 
+    }
     // Else if for all 4 positive options
     else if (confirmLowercase && confirmUppercase && confirmNumber && confirmSpecial) {
 
